@@ -1,0 +1,150 @@
+<!-- Add icon library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div class="card">
+  <img src="./assets/images/Team/team_image_2.png">
+  <h1>{{user_name}}</h1>
+  <p class="title">{{identification}}</p>
+  <p>{{email_value}}</p>
+  
+
+  <p><button (click)="toggle_edit()">Edit</button></p>
+  <p><button (click)="newTutorial()">Become a teacher!</button></p>
+</div>
+<!--card-->
+
+
+<!--Edit-->
+<div *ngIf='edit' class="container">
+  
+  <form action="action_page.php">
+    <div class="row">
+      <div class="col-25">
+        <label for="fname">Full Name</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="FullName" name="firstname" placeholder="Your name..">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="lname">Email/Contact</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="email" name="lastname" placeholder="Your email...">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="country">Identification</label>
+      </div>
+      <div class="col-75">
+        <select id="identification" name="country">
+          <option value="LHS Student">LHS Student</option>
+          <option value="LHS Teacher">LHS Teacher</option>
+          <option value="LHS Parent">LHS Parent</option>
+        </select>
+      </div>
+    </div>
+    <div class="row">
+      
+    </div>
+  </form>
+  <p><button (click)="submit_button()">Submit</button></p>
+</div>
+<!--Edit-->
+
+
+
+
+
+
+
+<!--Make a course-->
+<div *ngIf='course_making' class="container">
+  
+  <form action="action_page.php">
+    <div class="row">
+      <div class="col-25">
+        <label for="fname">Name of Course</label>
+      </div>
+      <div class="col-75">
+        <!--<input type="text" id="productName" name="firstname" placeholder="Name your Course">-->
+        <input
+        type="text"
+        class="form-control"
+        id="title"
+        required
+        [(ngModel)]="tutorial.title"
+        name="title"
+      />
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="lname">Email to use</label>
+      </div>
+      <div class="col-75">
+        <!--<input type="text" id="productCode" name="lastname" placeholder="Email/Contact">-->
+        <input
+          class="form-control"
+          id="email"
+          required
+          [(ngModel)]="tutorial.email"
+          name="email"
+        />
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="lname">When is the course available?</label>
+      </div>
+      <div class="col-75">
+        <!--<input type="text" id="releaseDate" name="lastname" placeholder="what days are you free to teach?">-->
+        <input
+          class="form-control"
+          id="available"
+          required
+          [(ngModel)]="tutorial.available"
+          name="available"
+        />
+      </div>
+    </div>
+   
+    <div class="row">
+      <div class="col-25">
+        <label for="lname">Description</label>
+      </div>
+      <div class="col-75">
+        <!--<input type="text" id="description" name="lastname" placeholder="Info...">-->
+        <input
+          class="form-control"
+          id="description"
+          required
+          [(ngModel)]="tutorial.description"
+          name="description"
+        />
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-25">
+        <label for="lname">Price</label>
+      </div>
+      <div class="col-75">
+        <!--<input type="text" id="price" name="lastname" placeholder="Price...">-->
+        <input
+          class="form-control"
+          id="price"
+          required
+          [(ngModel)]="tutorial.price"
+          name="price"
+        />
+      </div>
+    </div>
+
+  </form>
+  <p><button (click)="saveTutorial()">Submit</button></p>
+</div>
+<!--Make a Course-->
+

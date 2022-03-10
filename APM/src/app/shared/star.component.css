@@ -1,0 +1,8 @@
+
+/* making styles for each html tag */
+.crop {
+  overflow: hidden;
+}
+div {
+  cursor: pointer;
+}

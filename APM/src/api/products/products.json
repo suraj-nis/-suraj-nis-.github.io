@@ -1,0 +1,52 @@
+[
+  {
+   
+    "productName": "Biology",
+    "productCode": "eddy@gmail.com",
+    "releaseDate": "Every Saturday at 2pm",
+    "description": "Biology taught by Eddy ",
+    "price": 25,
+    "starRating": 4.8,
+    "imageUrl": "assets/images/Team/team_image_1.png"
+  },
+  {
+    
+    "productName": "Geometry",
+    "productCode": "samay@gmail.com",
+    "releaseDate": "Every Sunday at 1pm",
+    "description": "Triangle Similarity test next",
+    "price": 30,
+    "starRating": 0.8,
+    "imageUrl": "./assets/images/new_photos/IMG-4744-modified.png"
+  },
+  {
+   
+    "productName": "Comp Sci",
+    "productCode": "jasmine@gmail.com",
+    "releaseDate": "Every Monday at 2pm",
+    "description": "Advanced JavaScript",
+    "price": 60,
+    "starRating": 4.8,
+    "imageUrl": "./assets/images/new_photos/IMG_5876(1)-modified.png"
+  },
+  {
+  
+    "productName": "Band",
+    "productCode": "michael@gmail.com",
+    "releaseDate": "Every Wednesday at 2pm",
+    "description": "How to play the tenor sax",
+    "price": 12,
+    "starRating": 3.7,
+    "imageUrl": "./assets/images/new_photos/IMG_6428-modified.png"
+  },
+  {
+  
+    "productName": "Elec/Comp Sci",
+    "productCode": "krish@gmail.com",
+    "releaseDate": "Every Friday at 5pm",
+    "description": "Teaches you the basics of elec/comp sci",
+    "price": 10,
+    "starRating": 4.6,
+    "imageUrl": "./assets/images/new_photos/IMG_6700-modified.png"
+  }
+]

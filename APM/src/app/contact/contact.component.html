@@ -1,0 +1,32 @@
+
+<!--ngIf command only shows the contact page if a certain variable is true
+    In this case it is submit-->
+<div class="container" *ngIf="submit">
+    <form action="action_page.php">
+  
+      <label for="fname">First Name</label>
+      <input type="text" id="fname" name="firstname" placeholder="Your name..">
+  
+      <label for="lname">Last Name</label>
+      <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+  
+      <label for="country">Subject</label>
+      <select id="country" name="country">
+        <option value="australia">Problem</option>
+        <option value="canada">Contact</option>
+        <option value="usa">Other</option>
+      </select>
+  
+      <label for="subject">Info</label>
+      <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+  
+      <button type="button" class="submit" (click)="submit_toggle()">Submit</button>
+  
+    </form>
+  </div>
+<!--Another div container with the *ngIf command in this case using the variable back-->
+<div class="container" *ngIf="back">
+  <h1>Thank you for submitting</h1>
+  <button type="button" class="submit" (click)="submit_toggle()">Back to Submit</button>
+  <!--the (click) method will run this method when the button is clicked-->
+</div>

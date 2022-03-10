@@ -1,0 +1,186 @@
+﻿<!--Home Page start-->
+
+   
+ 
+  <div class="container" *ngIf="home">
+    <header>
+      <img src="./assets/images/loginsignup.png" alt="login" class = "loginimg">
+      <button type="button" class="homelogin" (click)="home_login_signup()">LogIn/Signup</button>
+    </header>
+     
+
+     
+
+
+      <main>
+          <h1>
+              Connect/Sync
+          </h1>
+
+          <p>We at Calligo aim to connect students to qualified mentors for a flexible, enriching, and overall cost-effective environment Calligo aims to provide affordable enrichment in a plethora of areas, from sports, all the way to academics. Calligo provides students with affordable, qualified, and flexible tutors at a monthly subscription cost.</p>
+          <a href="mailto:WeAreBestRestaurant@gmail.com?Subject=Rerservation">Get a Subscription now!</a>
+
+         
+
+      </main>
+
+
+    <h1> <img src="./assets/images/student_teacher.jpg" alt="student_teacher" class="student_teacher"> </h1> 
+
+
+
+      
+      <main>
+        <h1>
+            About us
+        </h1>
+
+        <p>We at Calligo aim to connect students to qualified mentors for a flexible, enriching, and overall cost-effective environment Calligo aims to provide affordable enrichment in a plethora of areas, from sports, all the way to academics. Calligo provides students with affordable, qualified, and flexible tutors at a monthly subscription cost.</p>
+     
+  
+    </main>
+
+    <h1> <img src="./assets/images/connect_image.jpg" alt="student_teacher" class="student_teacher"> </h1> 
+
+    <main>
+      <h1 class="team">
+          Meet the Team!
+      </h1>
+
+    <h1>
+      <img src="./assets/images/new_photos/IMG_0563-modified.png" alt="team" class="profile_team">
+      <p>Co-CEO</p>
+      <p>Suraj is a coder that enjoys taking up challenge projects</p>
+      <img src="./assets/images/new_photos/IMG_5996-modified.png" alt="team2" class="profile_team">
+      <p>Co-CEO</p>
+      <p>Oishik is a community hero and continues to design and make buisness projects</p>
+    </h1>
+   
+
+  </main>
+     
+
+      <footer>
+
+        <a href="https://twitter.com/samnis234" target="_blank">
+          <img src="./assets/images/twitter.png" alt="login" class = "socialimages">
+          </a>
+        <a href="https://www.facebook.com/Calligo-108849525079535" target="_blank">
+          <img src="./assets/images/facebook_icon.png" alt="login" class = "socialimages">
+          </a>
+          <a href="https://www.instagram.com/calligo.i/" target="_blank">
+            <img src="./assets/images/insta_icon.png" alt="login" class = "socialimages">
+            </a>
+          
+           
+          
+             
+
+      </footer>
+
+  </div>
+ 
+ 
+ 
+ 
+
+
+<!--Home Page emd-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--Sign up page-->
+
+<form *ngIf ='signup' action="action_page.php" style="border:1px solid #ccc" >
+  <div class="container" >
+    <h1>Sign Up</h1>
+    <p>Please fill in this form to create an account.</p>
+    <hr>
+
+    <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="email" id ='email'  required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" id ='psw'required>
+    
+    
+
+    <label for="psw-repeat"><b>Repeat Password</b></label>
+    <input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" required>
+
+    <label>
+      <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+    </label>
+
+    
+
+    <div class="clearfix">
+      <button type="button" class="scancelbtn" (click)="signupcancel()">Cancel</button>
+      <button type="submit" class="signupbtn" (click)="signupconfirm()">Sign Up</button>
+      <button type="submit" class="loginbtn"(click)='login_fromsignup()'>Already have an Account? Log in</button>
+
+    </div>
+  </div>
+</form>
+
+
+
+<!--End of Sign up page-->
+
+
+
+
+
+
+<!--start of login page-->
+
+<form *ngIf='login'action="action_page.php" method="post">
+  <div class="imgcontainer">
+    <img src="./assets/images/loginsignup.png" alt="Avatar" class="avatar">
+  </div>
+
+  <div class="container">
+    <label for="uname"><b>Username</b></label>
+    <input type="text" placeholder="Enter Username" name="uname" required> 
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+
+    <button type="submit">Login</button>
+    <label>
+      <input type="checkbox" checked="checked" name="remember"> Remember me
+    </label>
+  </div>
+
+  <div class="container" style="background-color:#f1f1f1">
+    <button type="button" class="cancelbtn" (click)="logincancel()">Cancel</button>
+    
+  </div>
+</form>
+
+<!--End of log in page-->
